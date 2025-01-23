@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+SModel.egg-info/PKG-INFO
+SModel.egg-info/SOURCES.txt
+SModel.egg-info/dependency_links.txt
+SModel.egg-info/requires.txt
+SModel.egg-info/top_level.txt
+smodel/__init__.py
+smodel/smodel.py
