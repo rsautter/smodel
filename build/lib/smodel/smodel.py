@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.interpolate import NearestNDInterpolator, griddata,interp1d
-from scipy.stats import Normal
+from scipy.stats import norm
 
 class SModel:
     def __init__(self,p=0.3,interp="nearest",stat="uniform"):
@@ -37,8 +37,8 @@ class SModel:
         if self.stat == "uniform":
             frag = np.random.rand(*shape)
         elif self.stat == "normal":
-            dist = Normal(mu=0,sigma=1/np.sqrt(max(shape)))
-            frag = dist.sample(shape)
+            dist = norm(loc=0,scale=1/np.sqrt(max(shape)))
+            frag = dist.rvs(shape)
         frag = frag - np.average(frag)
         return frag
 
